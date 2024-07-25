@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truth Table Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Truth Table Generator</h1>
-    <div id="operators-info">
-        <h2>Logical Operators</h2>
-        <ul>
-            <li>NOT: ~</li>
-            <li>AND: &</li>
-            <li>OR: |</li>
-            <li>XOR: ^</li>
-            <li>IMPLICATION: =></li>
-            <li>BICONDITIONAL: <=> </li>
-        </ul>
-    </div>
-    <form id="truth-table-form">
-        <label for="num-variables">Number of Variables (2-3):</label>
-        <input type="number" id="num-variables" name="num-variables" min="2" max="3" required>
-        <div id="variable-inputs"></div>
-        <label for="expression">Expression:</label>
-        <input type="text" id="expression" name="expression" required>
-        <button type="submit">Generate Truth Table</button>
-    </form>
-    <table id="truth-table">
-        <thead>
-            <tr id="header-row"></tr>
-        </thead>
-        <tbody id="table-body">
-        </tbody>
-    </table>
+    <main>
+        <div class="main-heading">
+            <p>Truth Table Generator</p>
+        </div>
+        <div class="main-container">
+            <h2>Logical Operators</h2>
+            <div class="operators-info">
+                <div class="right">
+                    <ul>
+                        <li>NOT: ~</li>
+                        <li>AND: &</li>
+                        <li>OR: |</li>
+                    </ul>
+                </div>
+                <div class="left">
+                    <ul>
+                        <li>XOR: ^</li>
+                        <li>IMPLICATION: =></li>
+                        <li>BICONDITIONAL: <=>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inputs">
+                <form id="truth-table-form">
+                    <div class="inner-first">
+                        <div class="inner-first-label">
+                            <label for="num-variables">Number of Variables (2-3):</label>
+                        </div>
+                        <div class="inner-first-input">
+                            <input type="number" id="num-variables" name="num-variables" min="2" max="3" required>
+                        </div>
+                    </div>
+                    <div id="variable-inputs"></div>
+                    <div class="inner-third">
+                        <div class="inner-third-label">
+                            <label for="expression">Expression for truth-table:</label>
+                        </div>
+                        <div class="inner-third-input">
+                            <input type="text" id="expression" name="expression" required>
+                        </div>
+                    </div>
+                    <button type="submit">Generate Truth Table</button>
+
+                </form>
+            </div>
+        </div>
+        <div class="table">
+            <table id="truth-table">
+                <thead>
+                    <tr id="header-row"></tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
+
 </html>

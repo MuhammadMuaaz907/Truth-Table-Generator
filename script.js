@@ -6,7 +6,7 @@ document.getElementById('num-variables').addEventListener('change', function() {
     for (let i = 1; i <= numVariables; i++) {
         const div = document.createElement('div');  // Create a new div for each input
         const label = document.createElement('label');
-        label.textContent = `Variable ${i} Name:`;
+        label.textContent = `Variable ${i}: `;
         const input = document.createElement('input');
         input.type = 'text';
         input.name = `variable${i}`;
